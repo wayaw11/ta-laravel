@@ -35,7 +35,7 @@
             const ctx = document.getElementById('myChart');
 
             new Chart(ctx, {
-                type: 'pie',
+                type: 'bar',
                 data: {
                     labels: ['Produck', 'Kategori'],
                     datasets: [{
