@@ -1,0 +1,135 @@
+// Variable overrides first
+$primary: #d12b09;
+$secondary: #441f13;
+// Then import Bootstrap
+@import "../../node_modules/bootstrap/scss/bootstrap";
+/* GLOBAL STYLES
+-------------------------------------------------- */
+/* Padding below the footer and lighter body text */
+
+body {
+    text-transform: capitalize;
+    padding-top: 3rem;
+    // padding-bottom: 3rem;
+    color: rgb(var(--bs-tertiary-color-rgb));
+}
+input {
+    @extend .shadow-lg;
+}
+
+@media (max-width: 768px) {
+    /* CSS that should be displayed if width is equal to or less than 800px goes here */
+    .wrap {
+        /**Major Properties**/
+        overflow: hidden;
+        -webkit-box-orient: vertical;
+        display: block;
+        display: -webkit-box;
+        overflow: hidden !important;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: 4;
+    }
+}
+.card {
+    height: 30rem;
+    @extend .bg-warning-subtle;
+    @extend .bg-gradient;
+    @extend .shadow-lg;
+    transition: 0.3s;
+}
+.card img {
+    // width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+/* Carousel base clas
+/* Since positioning the image, we need to help out the caption */
+
+.img-thumbnail {
+    @extend .p-2;
+    @extend .mt-3;
+    @extend .shadow-lg;
+}
+
+/* MARKETING CONTENT
+-------------------------------------------------- */
+
+/* Center align the text within the three columns below the carousel */
+.marketing .col-lg-4 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+/* rtl:begin:ignore */
+.marketing .col-lg-4 p {
+    margin-right: 0.75rem;
+    margin-left: 0.75rem;
+}
+/* rtl:end:ignore */
+
+/* Featurettes
+------------------------- */
+
+.featurette-divider {
+    margin: 5rem 0; /* Space out the Bootstrap <hr> more */
+}
+
+/* Thin out the marketing headings */
+/* rtl:begin:remove */
+.featurette-heading {
+    letter-spacing: -0.05rem;
+}
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (min-width: 40em) {
+    .featurette-heading {
+        font-size: 50px;
+    }
+}
+
+@media (min-width: 62em) {
+    .featurette-heading {
+        margin-top: 7rem;
+    }
+}
+//
+/* Carousel base class */
+.carousel {
+    img {
+        filter: brightness(50%);
+    }
+}
+
+/* Declare heights because of positioning of img element */
+.carousel-item {
+    height: 32rem;
+}
+
+//
+.nav-hover {
+    display: inline-block;
+    position: relative;
+}
+
+.nav-hover::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: $warning;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.nav-hover:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
