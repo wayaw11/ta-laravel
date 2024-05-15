@@ -9,7 +9,11 @@
                 </a>
                 <a class="nav-link {{ Request::is('products*') ? 'active disabled ' : '' }}" href="/products">
                     <div class="sb-nav-link-icon"><i class="fa-solid fa-utensils"></i></div>
-                    Produk
+                    Makanan
+                </a>
+                <a class="nav-link" href="#!">
+                    <div class="sb-nav-link-icon"><i class="fa-solid fa-utensils"></i></div>
+                    Minuman
                 </a>
                 <a class="nav-link {{ Request::is('categories*') ? 'active disabled ' : '' }}" href="/categories">
                     <div class="sb-nav-link-icon"><i class="fa-solid fa-table-list"></i></div>
